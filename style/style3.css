@@ -1,0 +1,60 @@
+/* Container for the video */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../img/bg3.jpg'); /* Background Image */
+  background-size: cover; /* Ensure background covers entire viewport */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  
+}
+
+.video-container {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfectly center the container */
+  width: 612px; /* Set the width manually to 612px */
+  max-height: 100vh; /* Ensure the height does not exceed the viewport height */
+  height: auto; /* Let the height adjust based on the width */
+  display: flex;
+  justify-content: center; /* Center video horizontally within the container */
+  align-items: center; /* Center video vertically */
+  z-index: -1; /* Ensure the video stays in the background */
+  padding: 0; /* No padding around the container */
+}
+
+/* Video itself */
+#birthday-video {
+  width: 100%; /* The video will fill the full width of the container */
+  height: auto; /* Height adjusts based on width */
+  max-height: 100vh; /* Ensures that the height does not exceed the viewport height */
+  object-fit: contain; /* Ensure the video fits the container */
+  z-index: -1; /* Keep the video behind other content */
+}
+/* Skip Button Styling (Modern YouTube style) */
+.skip-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  /* border: none; */
+  border:0.9px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skip-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
