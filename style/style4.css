@@ -1,0 +1,78 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Evergreen', cursive; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1d2158, #5e4fa2, #6a4cdb, #9b59b6, #003366); /* Mix of dark purple, purple, blue, dark blue, and light blue */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Birthday Page Styling */
+#birthdayPage {
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay for better contrast */
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 700px;
+    color: #ffffff; /* White text for contrast */
+    animation: fadeIn 2s ease-in-out, scaleUp 1s forwards;
+}
+
+/* Birthday Message Styling */
+.birthday-message h1 {
+    font-size: 3.5em;
+    color: #ffffff; /* White text for all */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.birthday-message h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text for all */
+}
+
+.birthday-message h3 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #ffffff; /* White text for all */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for scaling up the birthday message */
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
