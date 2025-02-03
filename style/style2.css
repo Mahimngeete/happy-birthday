@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  
+  background-color: #1d1b1b;
+  
+  display: flex;
+  background-size: 400% 400%;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation: gradientAnimation 15s ease infinite;
+} */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('../img/bg3.jpg'); /* Background Image */
+  background-size: cover; /* Ensure background covers entire viewport */
+  background-position: center; /* Center the background */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevent scrolling */
+  
+}
+
+/* Video Styling */
+/* .video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+#birthday-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+} */
+.video-container {
+  position: absolute; /* Position it absolutely to control its exact placement */
+  top: 0; /* Align the top of the video container to the top of the viewport */
+  left: 50%; /* Start the container from the center horizontally */
+  transform: translateX(-50%); /* Offset the video container to keep it centered */
+  width: 520px; /* The width of the video */
+  height: 100vh; /* Set the height of the video container to 100vh */
+  display: flex;
+  justify-content: center; /* Keep the video horizontally centered within the container */
+  z-index: -1; /* Ensure the video stays in the background */
+    /* Adding a white, rounded rectangle border around the video */
+    border-left: 35px solid rgba(255, 255, 255, 0.945); /* White border of 47px width */
+    border-right: 35px solid rgba(255, 255, 255, 0.945); /* White border of 47px width */
+    border-radius: 20px; /* Rounded corners, you can adjust the radius as per preference */
+    border-top: 15px solid rgba(255, 255, 255, 0.945);
+    border-bottom: 15px solid rgba(255, 255, 255, 0.945);
+    padding: 0; /* No extra padding around the container */
+
+}
+
+/* Video styling */
+#birthday-video {
+  width: 100%; /* Video fills the full width of the container */
+  height: 100%; /* The video will cover the full container height */
+  object-fit: cover; /* Ensure the video maintains aspect ratio and fills the area */
+  z-index: -1; /* Keep the video behind other content */
+}
+
+
+/* Skip Button Styling (Modern YouTube style) */
+.skip-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  /* border: none; */
+  border:0.9px solid white;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.skip-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Skip Message Styling */
+.skip-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+}
+
+.message-text {
+  font-size: 18px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #ff6347; /* Fun, playful color */
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.next-button {
+  background-color: #21a1f1;
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.next-button:hover {
+  background-color: #1d91d5;
+}
