@@ -297,3 +297,40 @@ body {
     font-weight: lighter;
   }
 }
+/* update */
+ .next-button-container {
+  
+  /* visibility: hidden; */
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.modern-button {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: inline-block;
+  /* dsplay chna */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    z-index: 10; /* Ensure it's above other content */
+    position: relative;
+  
+}
+
+.modern-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modern-button:active {
+  transform: translateY(1px);
+  box-shadow: none;
+} 
