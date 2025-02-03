@@ -54,7 +54,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-62.857143,-38.169022)">
+     transform="translate(-44.857143,-38.169022)  scale(0.8)" >
     <path
        style="fill:#ff6a9d;fill-opacity:1;fill-rule:nonzero;stroke:none"
        d="M 62.857143,886.6479 351.42857,109.50504 645.71429,883.79075 C 451.42857,984.23468 257.14286,1006.7143 62.857143,886.6479 z"
@@ -235,3 +235,4 @@
        transform="translate(-6.0609153,28.284272)" />
   </g>
 </svg>
+
