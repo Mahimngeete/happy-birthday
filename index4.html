@@ -43,7 +43,7 @@
             width: 300px; /* Ensure players are properly visible */
         }
 
-        .play-btn {
+        button {
             background-color: black;
             color: white;
             font-size: 20px;
@@ -51,28 +51,12 @@
             border: none;
             cursor: pointer;
             margin-top: 15px;
-            border-radius: 5px;
-            display: inline-block;
+            border-radius: 10px;
+            margin-bottom:10px ;
         }
 
-        .play-btn:hover {
+        button:hover {
             background-color: grey;
-        }
-
-        /* Hide individual buttons on desktop */
-        .mobile-btn {
-            display: none;
-        }
-
-        /* Show individual buttons on mobile devices */
-        @media (max-width: 768px) {
-            .desktop-btn {
-                display: none;
-            }
-
-            .mobile-btn {
-                display: inline-block;
-            }
         }
     </style>
 </head>
@@ -82,15 +66,13 @@
     <p>May your day be as beautiful and as lovely as you are...</p>
 
     <h2>I think it's your fav 🎶</h2>
-    <button class="play-btn desktop-btn" onclick="playAudio()">Click to Play Music</button>
-    <button class="play-btn mobile-btn" onclick="playAudioSingle('song1')">Play This Song</button>
+    <button onclick="playAudio()">Click to Play Music</button>
     <audio id="song1" controls>
         <source src="img/ye wada raha.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
     <h2>Me dunga sath teraa! 🎶</h2>
-    <button class="play-btn mobile-btn" onclick="playAudioSingle('song2')">Play This Song</button>
     <audio id="song2" controls>
         <source src="img/dunga sath tera.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
@@ -101,19 +83,11 @@
     <script>
         function playAudio() {
             let song1 = document.getElementById("song1");
-            //let song2 = document.getElementById("song2");
+            let song2 = document.getElementById("song2");
 
+            // Check if audio can be played, and then play it
             if (song1.paused) song1.play();
            // if (song2.paused) song2.play();
-        }
-
-        function playAudioSingle(songId) {
-            let song = document.getElementById(songId);
-            if (song.paused) {
-                song.play();
-            } else {
-                song.pause();
-            }
         }
     </script>
 
