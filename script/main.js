@@ -515,16 +515,7 @@ const animationTimeline = () => {
       },
       "party"
     )
-    .to(
-      ".next-button-container", 
-      0.5, 
-      {
-        opacity: 1,
-        visibility: "visible",  // Ensure it's visible
-        display: "block",        // If hidden by display:none initially
-      },
-      "+=0.5" // Delay for a smooth transition
-    )
+  //was here
     
     .staggerTo(
       ".eight svg",
@@ -538,14 +529,15 @@ const animationTimeline = () => {
       },
       0.3
     )
-    .to(".six", 0.5, {
-      // opacity: 0,
-      // y: 30,
-      // zIndex: "-1"
-      opacity: 1,      // Ensure the element is fully visible
-      y: 0,            // Keep it in its original position (or adjust to where you want)
-      zIndex: "1"      // Ensure it's above other elements (you can choose a suitable z-index)
-    })
+   //was here
+   .to(".six", 0.5, {
+    // opacity: 0,
+    // y: 30,
+    // zIndex: "-1"
+    opacity: 1,      // Ensure the element is fully visible
+    y: 0,            // Keep it in its original position (or adjust to where you want)
+    zIndex: "1"      // Ensure it's above other elements (you can choose a suitable z-index)
+  },)
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
       ".last-smile",
@@ -555,13 +547,24 @@ const animationTimeline = () => {
       },
       "+=1"
     );
+    
     tl.add(function() {
       launchConfetti(); // Start the confetti effect
       // Start looping the confetti effect every 3 seconds
       setInterval(() => {
         launchConfetti();
       }, 3000);
-    });
+    })
+    .to(
+      ".next-button-container", 
+      0.5, 
+      {
+        opacity: 1,
+        visibility: "visible",  // Ensure it's visible
+        display: "block",        // If hidden by display:none initially
+      },
+      "+=0.5" // Delay for a smooth transition
+    )
     // Add the confetti after the animation of the "Next" button
     // .call(() => {
     //   //launchConfetti();
@@ -666,4 +669,6 @@ function launchConfetti() {
   
 // Run fetch and animation in sequence
 fetchData();
+
+
 
