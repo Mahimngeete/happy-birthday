@@ -40,6 +40,23 @@
 
         audio {
             margin-top: 10px;
+            width: 300px; /* Ensure players are properly visible */
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 10px;
+            margin-bottom:10px ;
+        }
+
+        button:hover {
+            background-color: grey;
         }
     </style>
 </head>
@@ -49,19 +66,32 @@
     <p>May your day be as beautiful and as lovely as you are...</p>
 
     <h2>I think it's your fav 🎶</h2>
-    <audio controls autoplay loop>
+    <button onclick="playAudio()">Click to Play Music</button>
+    <audio id="song1" controls>
         <source src="img/ye wada raha.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
     <h2>Me dunga sath teraa! 🎶</h2>
-    <audio controls autoplay loop>
+    <audio id="song2" controls>
         <source src="img/dunga sath tera.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
-    <p>Played by me ,was learning in sem break🤧</p>
+    <p>Played by me, was learning in sem break🤧</p>
+
+    <script>
+        function playAudio() {
+            let song1 = document.getElementById("song1");
+            let song2 = document.getElementById("song2");
+
+            // Check if audio can be played, and then play it
+            if (song1.paused) song1.play();
+           // if (song2.paused) song2.play();
+        }
+    </script>
 
 </body>
 </html>
+
 
