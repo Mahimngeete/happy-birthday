@@ -41,6 +41,7 @@
         audio {
             margin-top: 10px;
             width: 300px; /* Ensure players are properly visible */
+            display: block; /* Ensures they are not hidden */
         }
 
         button {
@@ -52,7 +53,7 @@
             cursor: pointer;
             margin-top: 15px;
             border-radius: 10px;
-            margin-bottom:10px ;
+            margin-bottom: 10px;
         }
 
         button:hover {
@@ -67,12 +68,14 @@
 
     <h2>I think it's your fav 🎶</h2>
     <button onclick="playAudio()">Click to Play Music</button>
+    
     <audio id="song1" controls>
         <source src="img/ye wada raha.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
     </audio>
 
     <h2>Me dunga sath teraa! 🎶</h2>
+    
     <audio id="song2" controls>
         <source src="img/dunga sath tera.mpeg" type="audio/mpeg">
         Your browser does not support the audio tag.
@@ -85,14 +88,19 @@
             let song1 = document.getElementById("song1");
             let song2 = document.getElementById("song2");
 
-            // Check if audio can be played, and then play it
-            if (song1.paused) song1.play();
-           // if (song2.paused) song2.play();
+            // Play the first song
+            song1.play();
+
+            // When the first song ends, play the second song
+            song1.addEventListener("ended", function() {
+                song2.play();
+            });
         }
     </script>
 
 </body>
 </html>
+
 
 
 
