@@ -213,6 +213,12 @@
 //     });
 // };
 //button hidden initially
+document.addEventListener("click", function () {
+  let bgMusic = document.getElementById("bg-music");
+  if (bgMusic.paused) {
+      bgMusic.play().catch(error => console.log("Autoplay prevented:", error));
+  }
+});
 const fetchData = () => {
   
     //niche se normal
