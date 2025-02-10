@@ -47,34 +47,27 @@ body, html {
   object-fit: cover;
   z-index: -1; 
 } */
+
 .video-container {
-  position: absolute; /* Position it absolutely to control its exact placement */
-  top: 0; /* Align the top of the video container to the top of the viewport */
-  left: 50%; /* Start the container from the center horizontally */
-  transform: translateX(-50%); /* Offset the video container to keep it centered */
-  width: 520px; /* The width of the video */
-  height: 100vh; /* Set the height of the video container to 100vh */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   display: flex;
-  justify-content: center; /* Keep the video horizontally centered within the container */
-  z-index: -1; /* Ensure the video stays in the background */
-    /* Adding a white, rounded rectangle border around the video */
-    border-left: 35px solid rgba(255, 255, 255, 0.945); /* White border of 47px width */
-    border-right: 35px solid rgba(255, 255, 255, 0.945); /* White border of 47px width */
-    border-radius: 20px; /* Rounded corners, you can adjust the radius as per preference */
-    border-top: 15px solid rgba(255, 255, 255, 0.945);
-    border-bottom: 15px solid rgba(255, 255, 255, 0.945);
-    padding: 0; /* No extra padding around the container */
-
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Prevents extra space */
+  z-index: -1;
+  background: black; /* Prevents white bars */
 }
 
-/* Video styling */
+/* Styles for Google Drive Video */
 #birthday-video {
-  width: 100%; /* Video fills the full width of the container */
-  height: 100%; /* The video will cover the full container height */
-  object-fit: cover; /* Ensure the video maintains aspect ratio and fills the area */
-  z-index: -1; /* Keep the video behind other content */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  border: none;
 }
-
 
 /* Skip Button Styling (Modern YouTube style) */
 .skip-button {
@@ -109,6 +102,7 @@ body, html {
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: none; /* Initially hidden */
+  z-index: 2;
 }
 
 .message-text {
